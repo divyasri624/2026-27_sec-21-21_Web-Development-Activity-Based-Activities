@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Learning Platform</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f7fc;
+            color: #333;
+        }
+
+        header {
+            background-color: #243b80;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        nav {
+            background-color: #172554;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffd166;
+        }
+
+        .banner {
+            background-color: #dbeafe;
+            text-align: center;
+            padding: 35px 15px;
+        }
+
+        .banner h2 {
+            color: #243b80;
+            font-size: 30px;
+        }
+
+        .banner p {
+            font-size: 17px;
+        }
+
+        .container {
+            padding: 25px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .container h2 {
+            text-align: center;
+            color: #243b80;
+        }
+
+        .courses {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px #cccccc;
+        }
+
+        .thumbnail {
+            background-color: #dbeafe;
+            height: 130px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 45px;
+            border-radius: 8px;
+        }
+
+        .card h3 {
+            color: #243b80;
+        }
+
+        .card p {
+            line-height: 1.5;
+        }
+
+        .progress {
+            background-color: #ddd;
+            height: 10px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            background-color: #22a06b;
+            height: 10px;
+        }
+
+        button {
+            background-color: #243b80;
+            color: white;
+            border: none;
+            padding: 12px 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button: hover {
+            background-color: #172554;
+        }
+
+        button: focus-visible,
+        a:focus-visible {
+            outline: 3px solid #f59e0b;
+            outline-offset: 3px;
+        }
+
+        .instructor {
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-top: 25px;
+        }
+
+        footer {
+            background-color: #172554;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                display: inline-block;
+                margin: 8px;
+            }
+
+            .banner h2 {
+                font-size: 24px;
+            }
+
+            .container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Learn Online</h1>
+        <p>Learn New Skills Anytime, Anywhere</p>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <a HREF="#home">Home</a>
+        <a HREF="#courses">Courses</a>
+        <a HREF="#instructors">Instructors</a>
+        <a HREF="#progress">My Progress</a>
+    </nav>
+
+    <section class="banner" id="home">
+        <h2>Welcome to Online Learning</h2>
+        <p>Explore courses, learn from experts, and build your future.</p>
+        <a HREF="#courses">
+            <button type="button">Explore Courses</button>
+        </a>
+    </section>
+
+    <main class="container" id="courses">
+        <h2>Popular Courses</h2>
+
+        <div class="courses">
+
+            <article class="card">
+                <div class="thumbnail" aria-hidden="true">💻</div>
+                <h3>Web Development</h3>
+                <p>Learn HTML, CSS, and JavaScript to create websites.</p>
+                <p><strong>Instructor:</strong> Rahul Sharma</p>
+                <p><strong>Learning objectives:</strong></p>
+                <UL>
+                    <li>Understand HTML structure</li>
+                    <li>Design pages with CSS</li>
+                    <li>Create interactive websites</li>
+                </UL>
+                <button type="button"
+                    onclick="enroll('Web Development')">
+                    Enroll Now
+                </button>
+            </article>
+
+            <article class="card">
+                <div class="thumbnail" aria-hidden="true">🐍</div>
+                <h3>Python Programming</h3>
+                <p>Learn Python basics, loops, functions, and lists.</p>
+                <p><strong>Instructor:</strong> Priya Reddy</p>
+                <p><strong>Learning objectives:</strong></p>
+                <UL>
+                    <li>Understand Python syntax</li>
+                    <li>Write simple programs</li>
+                    <li>Solve coding problems</li>
+                </UL>
+                <button type="button"
+                    onclick="enroll('Python Programming')">
+                    Enroll Now
+                </button>
+            </article>
+
+            <article class="card">
+                <div class="thumbnail" aria-hidden="true">📊</div>
+                <h3>Data Science</h3>
+                <p>Explore data analysis, charts, and basic statistics.</p>
+                <p><strong>Instructor:</strong> Arjun Kumar</p>
+                <p><strong>Learning objectives:</strong></p>
+                <UL>
+                    <li>Understand datasets</li>
+                    <li>Analyze data</li>
+                    <li>Create visualizations</li>
+                </UL>
+                <button type="button"
+                    onclick="enroll('Data Science')">
+                    Enroll Now
+                </button>
+            </article>
+
+        </div>
+
+        <section id="instructors">
+            <h2>Our Instructors</h2>
+
+            <div class="courses">
+                <article class="card instructor">
+                    <div class="thumbnail" aria-hidden="true">👨‍🏫</div>
+                    <h3>Rahul Sharma</h3>
+                    <p>Web Development Expert</p>
+                </article>
+
+                <article class="card instructor">
+                    <div class="thumbnail" aria-hidden="true">👩‍🏫</div>
+                    <h3>Priya Reddy</h3>
+                    <p>Python Programming Expert</p>
+                </article>
+
+                <article class="card instructor">
+                    <div class="thumbnail" aria-hidden="true">👨‍💻</div>
+                    <h3>Arjun Kumar</h3>
+                    <p>Data Science Expert</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="progress">
+            <h2>My Learning Progress</h2>
+
+            <div class="card">
+                <p>Web Development — 75%</p>
+                <div class="progress"
+                    role="progress bar"
+                    aria-label="Web Development progress"
+                    aria-value now="75"
+                    aria-value min="0"
+                    aria-value max="100">
+                    <div class="progress-bar" style="width: 75%;"></div>
+                </div>
+
+                <p>Python Programming — 50%</p>
+                <div class="progress"
+                    role="progress bar"
+                    aria-label="Python Programming progress"
+                    aria-value now="50"
+                    aria-value min="0"
+                    aria-value max="100">
+                    <div class="progress-bar" style="width: 50%;"></div>
+                </div>
+
+                <p>Data Science — 25%</p>
+                <div class="progress"
+                    role="progress bar"
+                    aria-label="Data Science progress"
+                    aria-value now="25"
+                    aria-value min="0"
+                    aria-value max="100">
+                    <div class="progress-bar" style="width: 25%;"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Learn Online. All Rights Reserved.</p>
+        <p>Email: learnonline@example.com</p>
+    </footer>
+
+    <script>
+        function enroll(course Name) {
+            alert("You selected the " + course Name + " course!");
+        }
+    </script>
+
+</body>
+</html>
