@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Dashboard</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+body{font-family:Arial;margin:0;background:#f1f5f9}
+header,footer{background:#1e3a8a;color:white;padding:15px;text-align:center}
+nav{background:#2563eb;padding:15px}
+nav a{color:white;margin:5px}
+main{padding:15px}
+.cards{display:grid;grid-template-columns:1fr;gap:10px}
+.card{background:white;padding:15px;border-radius:8px}
+h2,h3{color:#1e3a8a}
+table{width:100%;background:white;border-collapse:collapse}
+td,th{padding:10px;border:1px solid #ddd}
+th{background:#2563eb;color:white}
+.bar{background:#16a34a;height:10px}
+@media(min-width:600px){.cards{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head>
+<body>
+<header><h1>Student Dashboard</h1><p>Welcome, Student!</p></header>
+<nav><a href="#profile">Profile</a><a href="#results">Results</a><a href="#attendance">Attendance</a><a href="#exams">Exams</a></nav>
+<main>
+<h2 id="profile">Student Details</h2><div class="card">Name: Divya<br>ID: 101<br>Department: CSE<br>Semester: 3</div>
+<h2>Academic Summary</h2><div class="cards">
+<div class="card">GPA: 8.6</div><div class="card">Attendance: 92%</div><div class="card">Assignments: 12/15</div></div>
+<h2 id="results">Semester Results</h2><table>
+<tr><th>Subject</th><th>Marks</th></tr><tr><td>Python</td><td>88</td></tr><tr><td>Database</td><td>92</td></tr><tr><td>Mathematics</td><td>79</td></tr></table>
+<h2 id="attendance">Attendance</h2><div class="card">Python: 95%<div class="bar" style="width:95%"></div>Web: 88%<div class="bar" style="width:88%"></div></div>
+<h2 id="exams">Examination Schedule</h2><div class="card">Python - 10 Nov<br>Database - 12 Nov<br>Web - 14 Nov</div>
+<h2>Announcements</h2><div class="card">Exams in November. Submit assignments on time!</div>
+</main>
+<footer>© 2026 Student Dashboard</footer>
+</body>
+</html>
