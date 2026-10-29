@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Learn Online</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{font-family:Arial;margin:0;background:#f4f7fc}
+header,footer{background:#243b80;color:white;text-align:center;padding:15px}
+nav{text-align:center;background:#172554;padding:12px}
+nav a{color:white;margin:8px}
+.banner{text-align:center;padding:20px;background:#dbeafe}
+.container{padding:15px}
+.courses{display:grid;grid-template-columns:1fr;gap:15px}
+.card{background:white;padding:15px;border-radius:10px}
+h2,h3{color:#243b80}
+button{background:#243b80;color:white;padding:10px;border:0}
+.progress{background:#ddd;height:10px}
+.bar{background:green;height:10px}
+@media(min-width:600px){.courses{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head>
+<body>
+<header><h1>Learn Online</h1><p>Learn Anytime, Anywhere</p></header>
+<nav><a href="#home">Home</a><a href="#courses">Courses</a><a href="#progress">Progress</a></nav>
+<div class="banner" id="home"><h2>Welcome to Learning</h2><p>Learn new skills online!</p></div>
+<main class="container" id="courses"><h2>Popular Courses</h2><div class="courses">
+<div class="card">💻<h3>Web Development</h3><p>Learn HTML and CSS</p><button onclick="enroll('Web Development')">Enroll</button></div>
+<div class="card">🐍<h3>Python</h3><p>Learn Python programming</p><button onclick="enroll('Python')">Enroll</button></div>
+<div class="card">📊<h3>Data Science</h3><p>Learn data analysis</p><button onclick="enroll('Data Science')">Enroll</button></div>
+</div>
+<section id="progress"><h2>Learning Progress</h2><p>Web Development 75%</p><div class="progress"><div class="bar" style="width:75%"></div></div></section>
+</main>
+<footer>© 2026 Learn Online</footer>
+<script>
+function enroll(course){alert("You selected "+course)}
+</script>
+</body>
+</html>
